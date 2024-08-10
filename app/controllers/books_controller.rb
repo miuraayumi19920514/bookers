@@ -9,8 +9,9 @@ class BooksController < ApplicationController
     redirect_to '/books/:id'
   end
 
-  def index
-  end
+　def index
+  　@books = Book.all
+　end
 
   def show
   end
