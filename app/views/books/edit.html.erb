@@ -1,4 +1,5 @@
 <h1>Editind Book</h1>
+<br>
 <% if @book.errors.any? %>
   <%= @book.errors.count %>errors
   <ul>
@@ -10,17 +11,19 @@
 
 <%= form_with model:@book do |f| %>
 
-  <div>
+  <div class="field">
     <%= f.label :title %></br>
     <%= f.text_field :title %>
   </div>
-  <div>
+  <br>
+  <div class="field">
     <%= f.label :body %></br>
     <%= f.text_area :body %>
   </div>
-  <div>
+  <br>
+  <div class="field">
     <%= f.submit 'Update Book' %>
   </div>
 <% end %>
-
+<br>
 <a href="<%= book_path(@book.id) %>">Show</a> | <a href="<%= books_path %>">Back</a>
